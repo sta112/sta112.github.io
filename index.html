@@ -55,7 +55,11 @@
 			/* Ensures your uploaded project images scale beautifully within the grid card columns */
 			.image.fit img {
 				max-height: 240px !important;
-				object-fit: cover !important;
+    			width: 100% !important;
+    			object-fit: contain !important; /* Changes from 'cover' to 'contain' to fit the whole logo */
+    			background-color: #ffffff !important; /* Adds a clean white backdrop so transparent logos blend beautifully */
+    			padding: 1rem !important; /* Gives the logo edges breathing room inside the box border */
+    			border-radius: 4px;
 			}
 		</style>
 	</head>
