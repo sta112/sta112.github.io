@@ -1,21 +1,23 @@
-HTML
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sophia Tse | Analytical Strategist Portfolio</title>
+		<title>Sophia Tse | Personal Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Structural layout fix to center the avatar image perfectly and correct intro spacing */
+			/* Structural overrides to prevent the theme script from hiding your header elements upon scrolling back up */
 			#intro {
 				display: flex !important;
 				flex-direction: column !important;
 				align-items: center !important;
 				justify-content: center !important;
 				text-align: center !important;
-				padding: 4rem 2rem !important;
+				padding: 6rem 2rem !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+				transform: none !important;
 			}
 
 			.avatar-wrapper {
@@ -39,16 +41,32 @@ HTML
 			#intro h1 {
 				margin-top: 0.5rem !important;
 				line-height: 1.2 !important;
+				opacity: 1 !important;
+				visibility: visible !important;
 			}
 
 			#intro p {
 				max-width: 32rem;
 				margin: 1rem auto 2rem auto !important;
+				opacity: 1 !important;
+				visibility: visible !important;
 			}
 			
-			/* Custom sizing adjustment for the grid image blocks */
+			/* Controls header text sizes and adds spacing right below Phase 1 & Phase 2 tags */
+			.posts article header .date {
+				display: block;
+				margin-bottom: 1.5rem !important;
+				letter-spacing: 0.1em;
+			}
+
+			.posts article header h2 {
+				font-size: 1.5rem !important;
+				line-height: 1.4 !important;
+			}
+
+			/* Prevents grid images from layout clipping */
 			.image.fit img {
-				max-height: 260px !important;
+				max-height: 280px !important;
 				object-fit: cover !important;
 			}
 		</style>
@@ -59,10 +77,10 @@ HTML
 
 				<div id="intro">
 						<div class="avatar-wrapper">
-							<img src="images/headshot.jpg" alt="Sophia Tse Profile Picture" />
+							<img src="images/headshot.jpg" alt="Sophia Tse" />
 						</div>
 						<h1>Sophia Tse</h1>
-						<p>Analytical Strategist & Insights Professional bridging the gap between complex data metrics and human-centric business operations.</p>
+						<p> Strategy & Insights Professional bridging the gap between complex data and human-centric business operations.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore Portfolio</a></li>
 						</ul>
@@ -74,7 +92,7 @@ HTML
 
 				<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Featured Case Study</a></li>
+							<li class="active"><a href="index.html">Featured Project</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/sophia-tse/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
@@ -86,12 +104,12 @@ HTML
 
 						<article class="post featured">
 								<header class="major">
-									<span class="date">End-to-End Analytics Solution</span>
+									<span class="date">End-to-End Analytics Project</span>
 									<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Laundromat Operations &<br />
 									Business Intelligence Platform</a></h2>
-									<p>Designed and executed an end-to-end data pipeline and business intelligence solution for a 22-asset brick-and-mortar retail footprint (10 washers, 10 dryers, 2 vending machines). I architected the foundational relational database design from scratch, engineered a multi-year transaction database in Python to mirror complex market conditions, and mapped the data warehouse into an executive-level Tableau dashboard to actively monitor business health and operational trends.</p>
+									<p>Designed and executed an end-to-end pipeline and data solution for a 22-asset brick-and-mortar retail footprint (10 washers, 10 dryers, 2 vending machines). I designed the foundational relational database from scratch, engineered a multi-year transaction database in Python to mirror business ramp up to maturity, and mapped the data warehouse into an Tableau dashboard to actively monitor business health and operational trends.</p>
 								</header>
-								<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image main" target="_blank"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Data Analytics Visualization Banner" /></a>
+								<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image main" target="_blank"><img src="images/salesdashboard.jpg" alt="Laundromat Sales Dashboard" /></a>
 								<ul class="actions special">
 									<li><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="button large" target="_blank">Launch Live Dashboard</a></li>
 								</ul>
@@ -104,11 +122,8 @@ HTML
 										<h2><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" target="_blank">Database Architecture<br />
 										& Python Pipeline</a></h2>
 									</header>
-									<a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="image fit" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png" style="max-height: 200px; width: auto; margin: 0 auto; display: block;" alt="Python Logo Architecture" /></a>
-									<p>Developed a robust data generation engine using Pandas and NumPy to construct a clean four-table relational model (Transactions, Customers, Machines, Vending). Programmatically modeled complex business logic, including a 6-month initialization curve for realistic customer ramp-up, precise weekend demand spikes, and tight Gaussian variances for utility and inventory COGS metrics to replicate authentic financial constraints.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="button" target="_blank">Inspect Data Architecture</a></li>
-									</ul>
+									<a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="image fit" target="_blank"><img src="images/python.jpg" alt="Python Pipeline Architecture" /></a>
+									<p>Developed a data generation engine using Pandas and NumPy to construct a clean four-table relational model (Transactions, Customers, Machines, Vending). I modeled complex business logic, including an initialization curve for realistic customer ramp-up, precise weekend demand spikes, and tight variances for utility and inventory COGS metrics to replicate authentic financial expenses.</p>
 								</article>
 								
 								<article>
@@ -117,11 +132,8 @@ HTML
 										<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Business Health Metrics<br />
 										& Trend Analysis</a></h2>
 									</header>
-									<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image fit" target="_blank"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Tableau Trend Analytics View" /></a>
-									<p>Synthesized the data warehouse into an interactive, user-focused executive dashboard. Developed key performance indicators (KPIs) to track year-over-year revenue velocity ($250K+ total revenue), monitor overall profit margins, isolate performance trends across product categories (Washers vs. Dryers vs. Vending), and capture core operational timelines such as grand opening ramp-up phases and seasonal macro-shifts.</p>
-									<ul class="actions special">
-										<li><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="button" target="_blank">Interact With Insights</a></li>
-									</ul>
+									<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image fit" target="_blank"><img src="images/analysis.jpg" alt="Tableau Trend Analytics View" /></a>
+									<p>Synthesized the data warehouse into an interactive, user-focused dashboard. Developed key performance indicators (KPIs) to track year-over-year revenue velocity ($250K+ total revenue), monitor overall profit margins, isolate performance trends across product categories (Washers vs. Dryers vs. Vending), and capture core operational timelines such as grand opening ramp-up phases and seasonal macro-shifts.</p>
 								</article>
 							</section>
 
@@ -131,7 +143,7 @@ HTML
 						<section class="split contact" style="width: 100%;">
 							<section class="alt">
 								<h3>Based In</h3>
-								<p>Vancouver, BC, Canada</p>
+								<p>Canada</p>
 							</section>
 							<section>
 								<h3>Professional Network</h3>
