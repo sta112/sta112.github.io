@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -7,14 +6,33 @@ HTML
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Injects a perfectly centered circular crop for your profile image */
+			.profile-container {
+				display: block;
+				margin: 0 auto 2rem auto;
+				width: 150px;
+				height: 150px;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+			.profile-container img {
+				width: 100%;
+				height: auto;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<div id="wrapper" class="fade-in">
 
 				<div id="intro">
+						<a href="https://www.linkedin.com/in/sophia-tse/" target="_blank" class="profile-container">
+							<img src="images/headshot.JPG" alt="Sophia Tse Headshot" />
+						</a>
 						<h1>Sophia Tse</h1>
-						<p> Strategist & Insights Professional bridging the gap between complex data and human-centric business operations.</p>
+						<p>Analytical Strategist & Insights Professional bridging the gap between complex data metrics and human-centric business operations.</p>
+						<p style="margin-bottom: 2rem;"><a href="https://www.linkedin.com/in/sophia-tse/" target="_blank" style="border-bottom: dotted 1px; text-decoration: none;">LinkedIn</a></p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore Portfolio</a></li>
 						</ul>
@@ -38,12 +56,12 @@ HTML
 
 						<article class="post featured">
 								<header class="major">
-									<span class="date">Core Project</span>
-									<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Laundromat Operations<br />
-									& Business Simulation</a></h2>
-									<p>Designed and executed an end-to-end data pipeline and business intelligence solution for a 22-asset brick-and-mortar retail footprint (10 washers, 10 dryers, 2 vending machines). I architected the foundational relational database design from scratch, engineered a multi-year transaction database in Python to mirror complex market conditions, and synthesized the data warehouse into an executive-level Tableau dashboard to actively monitor business health and operational trends.</p>
+									<span class="date">End-to-End Analytics Solution</span>
+									<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Laundromat Operations &<br />
+									Business Intelligence Platform</a></h2>
+									<p>Designed and executed an end-to-end data pipeline and business intelligence solution for a 22-asset brick-and-mortar retail footprint (10 washers, 10 dryers, 2 vending machines). I architected the foundational relational database design from scratch, engineered a multi-year transaction database in Python to mirror complex market conditions, and mapped the data warehouse into an executive-level Tableau dashboard to actively monitor business health and operational trends.</p>
 								</header>
-								<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image main" target="_blank"><img src="images/laundromat_preview.png" alt="Laundromat Analytics Dashboard" /></a>
+								<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image main" target="_blank"><img src="images/tableau_banner.jpg" alt="Data Analytics Visualization Banner" /></a>
 								<ul class="actions special">
 									<li><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="button large" target="_blank">Launch Live Dashboard</a></li>
 								</ul>
@@ -53,26 +71,26 @@ HTML
 								<article>
 									<header>
 										<span class="date">Phase 1: Relational Data Design</span>
-										<h2><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" target="_blank">The Python Code<br />
-										& Pipeline Architecture</a></h2>
+										<h2><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" target="_blank">Database Architecture<br />
+										& Python Pipeline</a></h2>
 									</header>
-									<a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="image fit" target="_blank"><img src="images/python_pipeline_preview.png" alt="Python Code Architecture" /></a>
-									<p>Developed a data generation engine using Pandas and NumPy to construct a clean four-table relational model (Transactions, Customers, Machines, Vending). Programmatically modeled complex business logic, including a 6-month initialization curve for realistic customer ramp-up, precise weekend demand spikes, and tight Gaussian variances for utility and inventory COGS metrics to replicate authentic financial constraints.</p>
+									<a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="image fit" target="_blank"><img src="images/python_logo.png" style="max-height: 300px; width: auto; margin: 0 auto; display: block;" alt="Python Logo Architecture" /></a>
+									<p>Developed a robust data generation engine using Pandas and NumPy to construct a clean four-table relational model (Transactions, Customers, Machines, Vending). Programmatically modeled complex business logic, including a 6-month initialization curve for realistic customer ramp-up, precise weekend demand spikes, and tight Gaussian variances for utility and inventory COGS metrics to replicate authentic financial constraints.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="button" target="_blank">Inspect Python Scripts</a></li>
+										<li><a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" class="button" target="_blank">Inspect Data Architecture</a></li>
 									</ul>
 								</article>
 								
 								<article>
 									<header>
 										<span class="date">Phase 2: Data Visualization & Strategy</span>
-										<h2><a href="https://prod-ca-a.online.tableau.com/#/site/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard?:iid=1" target="_blank">Business Health Metrics<br />
+										<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Business Health Metrics<br />
 										& Trend Analysis</a></h2>
 									</header>
-									<a href="https://prod-ca-a.online.tableau.com/#/site/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard?:iid=1" class="image fit" target="_blank"><img src="images/tableau_insights_preview.png" alt="Tableau Insights View" /></a>
-									<p>Translated the data warehouse into an interactive, user-focused executive dashboard. Developed key performance indicators (KPIs) to track year-over-year revenue velocity ($250K+ total revenue), monitor overall profit margins, isolate performance trends across product categories (Washers vs. Dryers vs. Vending), and capture core operational timelines such as grand opening ramp-up phases and seasonal macro-shifts.</p>
+									<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="image fit" target="_blank"><img src="images/metrics_analytics.jpg" alt="Tableau Trend Analytics View" /></a>
+									<p>Synthesized the data warehouse into an interactive, user-focused executive dashboard. Developed key performance indicators (KPIs) to track year-over-year revenue velocity ($250K+ total revenue), monitor overall profit margins, isolate performance trends across product categories (Washers vs. Dryers vs. Vending), and capture core operational timelines such as grand opening ramp-up phases and seasonal macro-shifts.</p>
 									<ul class="actions special">
-										<li><a href="https://prod-ca-a.online.tableau.com/#/site/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard?:iid=1" class="button" target="_blank">Interact With Insights</a></li>
+										<li><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" class="button" target="_blank">Interact With Insights</a></li>
 									</ul>
 								</article>
 							</section>
@@ -91,7 +109,7 @@ HTML
 							</section>
 							<section>
 								<h3>Digital Repository</h3>
-								<p><a href="https://github.com/sta112" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></p>
+								<p><a href="https://github.com/sta112" target="_blank">github.com/sta112</a></p>
 							</section>
 						</section>
 					</footer>
