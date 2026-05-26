@@ -21,13 +21,36 @@
 			}
 
 			/* Fixes the "Portfolio" link hovering over the scrolly down arrow during scrolling sequences */
-			#header {
-				z-index: 1 !important;
-				pointer-events: none; /* Prevents hidden blocks from intercepting clicks on the intro screen */
+			body.is-preload #header,
+			#intro ~ #header {
+			    opacity: 0;
+			    visibility: hidden;
+			    transition: opacity 0.3s ease, visibility 0.3s ease;
 			}
 			
-			#header * {
-				pointer-events: auto; /* Restores clickable functionality to the logo itself once active */
+			/* The template applies an .alt class to the body or wrapper once you scroll past the intro */
+			body:not(.is-article) #header {
+			    /* If the template's JS hasn't triggered the fixed state yet, keep it hidden */
+			    transform: translateY(-100%);
+			    transition: transform 0.3s ease;
+			}
+			
+			/* This targets the header container when the main navigation bar becomes active */
+			#nav.alt ~ #header, 
+			body.is-main #header,
+			#header {
+			    /* Standard template behavior takes over down here, but we override the initial clash */
+			}
+			
+			/* The cleanest CSS-only approach to prevent the overlap completely: */
+			#intro {
+			    position: relative;
+			    z-index: 10 !important; /* Forces the entire intro panel to sit firmly on top of the header slide-in */
+			    background-color: #1e252d; /* Matches your template's background color so it perfectly masks the header behind it */
+			}
+			
+			#header {
+			    z-index: 1 !important;
 			}
 
 			/* Replicates Nitish's clean circular profile frame with precision dimensions */
