@@ -1,7 +1,6 @@
-<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sophia Tse | Analytical Strategist Portfolio</title>
+		<title>Sophia Tse | Data & Insights Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,6 +17,17 @@
 				visibility: visible !important;
 				transform: none !important;
 				padding: 4rem 2rem !important;
+				z-index: 2; /* Forces the intro elements above background layers */
+			}
+
+			/* Fixes the "Portfolio" link hovering over the scrolly down arrow during scrolling sequences */
+			#header {
+				z-index: 1 !important;
+				pointer-events: none; /* Prevents hidden blocks from intercepting clicks on the intro screen */
+			}
+			
+			#header * {
+				pointer-events: auto; /* Restores clickable functionality to the logo itself once active */
 			}
 
 			/* Replicates Nitish's clean circular profile frame with precision dimensions */
@@ -32,7 +42,7 @@
 				border: 3px solid rgba(255, 255, 255, 0.1);
 			}
 
-			#intro h1, #intro p {
+			#intro h1, #intro p, #intro .actions {
 				opacity: 1 !important;
 				visibility: visible !important;
 				transform: none !important;
@@ -96,7 +106,7 @@
 								<header class="major">
 									<h2><a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank">Laundromat Operations &<br />
 									Data Visualization</a></h2>
-									<p>Designed and executed an end-to-end pipeline and solution for a 22-asset brick-and-mortar retail footprint (10 washers, 10 dryers, 2 vending machines). I architected the foundational relational database design from scratch, engineered a multi-year transaction database in Python to mirror real business conditions, and mapped the data warehouse into an executive-level Tableau dashboard to actively monitor business health and operational trends.</p>
+									<p>How do you track the business health of a fast-moving, multi-asset retail footprint when there's no pre-existing data infrastructure? To simulate real-world operations, I built an end-to-end data pipeline for a 22-asset brick-and-mortar laundromat (washers, dryers, and vending machines) entirely from scratch. This project bridges the gap between raw backend engineering and executive-level decision making—transforming synthetic multi-year transaction data into actionable financial and operational insights.</p>
 								</header>
 								<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank" class="image main"><img src="images/salesdashboard.jpg" alt="Laundromat Sales Dashboard" /></a>
 								<ul class="actions special">
@@ -112,7 +122,7 @@
 										& Python Pipeline</a></h2>
 									</header>
 									<a href="https://github.com/sta112/Tableau-Data-Viz-Project---Laundromat-Business-Analysis" target="_blank" class="image fit"><img src="images/python.jpg" alt="Python Architecture" /></a>
-									<p>Developed a robust data generation engine using Pandas and NumPy to construct a clean four-table relational model (Transactions,Customers,Machines,Vending). Programmatically modeled complex business logic, including an initialization curve for realistic customer ramp-up, precise weekend demand spikes, and tight variances for utility and inventory COGS metrics to replicate authentic financial expenses</p>
+									<p>Before you can visualize insights, you need a realistic, high-integrity data warehouse. Using Python (Pandas & NumPy), I created a data generation engine to model a four-table relational database spanning multiple years. Instead of generating random numbers, I programmed complex, real business logic into the pipeline—including a realistic consumer grand-opening ramp curve, weekend demand spikes, and strict financial variances for utility and inventory costs (COGS) to mirror genuine operational expenses.</p>
 								</article>
 								
 								<article>
@@ -122,7 +132,7 @@
 										& Trend Analysis</a></h2>
 									</header>
 									<a href="https://prod-ca-a.online.tableau.com/t/sophiatse51-925239984f/views/LaundromatDashboard/SalesDashboard" target="_blank" class="image fit"><img src="images/analysis.jpg" alt="Tableau Trend Analytics View" /></a>
-									<p>Synthesized the data warehouse into an interactive, user-focused executive dashboard. Developed key performance indicators (KPIs) to track year-over-year revenue velocity ($250K+ total revenue), monitor overall profit margins, isolate performance trends across product categories (Washers vs. Dryers vs. Vending), and capture core operational timelines such as grand opening ramp-up phases and seasonal macro-shifts.</p>
+									<p>Data is only as valuable as the decisions it enables. I translated the backend data architecture into an interactive Tableau dashboard designed to monitor revenue velocity and operational trends. The final build isolates performance across product categories (Washers vs. Dryers vs. Vending), calculates true year-over-year profit margins on a $250K+ revenue portfolio, and visually captures the exact point where the business successfully matured past its initial operational ramp-up phase.</p>
 								</article>
 							</section>
 					</div>
@@ -130,7 +140,7 @@
 				<footer id="footer">
 						<section class="alt">
 							<h3>Based In</h3>
-							<p>Vancouver, BC, Canada</p>
+							<p>Vancouver, BC</p>
 						
 							<h3>Professional Network</h3>
 							<ul class="icons alt">
@@ -151,4 +161,5 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+</html>
 </html>
